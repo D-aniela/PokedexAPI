@@ -1,0 +1,15 @@
+    <mat-drawer class="example-sidenav" mode="over" [opened]="abrirSidenav">
+      <mat-icon class="icono" style="float: left;" (click)="cerrarSidenavmethod()">close</mat-icon>
+      <p>POKEDEX</p>
+
+        <button routerLink="home" mat-raised-button>
+          HOME
+        </button>
+
+      <button routerLink="search" mat-raised-button>
+        SEARCH
+      </button>
+      <button routerLink="about" mat-raised-button>
+        ABOUT
+      </button>
+    </mat-drawer>

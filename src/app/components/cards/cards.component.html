@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{pokemonInput.name}}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    [src]="pokemonInput.sprites.front_default"
+    [alt]="pokemonInput.name"
+  />
+  <mat-card-content>
+  <mat-chip-list>
+     <mat-chip appChangeColorType [nameType]="typeGetData.type.name" *ngFor="let typeGetData of pokemonInput.types">
+       {{typeGetData.type.name}}
+      </mat-chip>
+  </mat-chip-list>
+</mat-card-content>
+  <mat-card-actions>
+    <button (click)="GotoDescription(pokemonInput.id)" mat-button>Ver mas..</button>
+  </mat-card-actions>
+</mat-card>

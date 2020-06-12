@@ -1,0 +1,35 @@
+<h3>Buscar pokemon</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <label for="">Busca tu pokemon</label>
+        <input type="text" class="form-control" #inputSearch placeholder="Busca tu pokemon">
+      </div>
+    </div>
+
+    <div class="col-12 mt-3 mb-5">
+
+      <div *ngIf="!loading" class="fadeIn">
+
+        <mat-grid-list cols="1" rowHeight="1:1.5">
+          <mat-grid-tile>
+
+            <app-cards [pokemonInput]="pokemonRecibido"></app-cards>
+
+          </mat-grid-tile>
+        </mat-grid-list>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+      el error en el que se muestran muchas emisiones es debido a que se tiene el evento keypress
+    y ejecuta el metodo en donde se encuentra el fromEvent, por lo tanto crea un fromEvent
+    por cada tecla que se presiona, al eliminar el evento, solamente se instancia el from event
+    que se encuentra en ngAfterViewInit
+-->

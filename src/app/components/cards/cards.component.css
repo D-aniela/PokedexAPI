@@ -1,0 +1,15 @@
+.card {
+  max-width: 70%;
+  margin: 15px;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}

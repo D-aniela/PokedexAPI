@@ -1,0 +1,47 @@
+<div class="contenedor">
+
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <ng-container *ngIf="!loading">
+
+
+    <h1>{{pokemonRecibido.name}}</h1>
+
+    <div class="main-information">
+      <ul class="tipos">
+        <li appChangeColorType *ngFor="let types of pokemonRecibido.types">
+          {{types.type.name}}
+        </li>
+      </ul>
+
+      <div class="Fila1">
+        <img [src]="pokemonRecibido.sprites.front_default" alt="" />
+        <ul>
+          <li>Estadísticas</li>
+          <li *ngFor="let stadistica of pokemonRecibido.stats">
+            {{stadistica.stat.name}} : {{stadistica.base_stat}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="descripcion">
+        <h4>Descripción</h4>
+        <p>{{descripcion.flavor_text}}</p>
+      </div>
+
+    </div>
+
+    <div class="profile">
+      <h3>Profile</h3>
+      <mat-grid-list cols="2" rowHeight="30px">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+    <div class="moves">
+
+    </div>
+  </ng-container>
+</div>

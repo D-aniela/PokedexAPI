@@ -1,0 +1,39 @@
+mat-grid-list {
+  width: 100vw;
+  /* height: auto; */
+}
+
+.pagination{
+display:flex;
+width:100%;
+background: #ccc;
+justify-content:space-around;
+}
+
+.pagination p{
+  line-height: 70px;
+  font-size: 20px;
+}
+
+mat-icon{
+  font-size: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+
+mat-spinner{
+margin: 20px auto ;
+}
+
+.fadeIn{
+  animation: animacion 0.8s ease-in-out forwards;
+}
+
+@keyframe animacion{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
